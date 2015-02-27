@@ -7,5 +7,6 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     # url(r'^admin/', include(admin.site.urls)),
-    url(r'^centers/$', 'centers.views.center_list', name='center_list'),
+    url(r'^centers/$', 'centers.views.centers_list', name='centers_list'),
+    url(r'^center/new/$', 'centers.views.center_create', name='center_create'),
 )
