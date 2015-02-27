@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+
+class Center(models.Model):
+    name = models.CharField(blank=True, null=True, max_length=20)
