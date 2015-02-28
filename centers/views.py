@@ -9,10 +9,18 @@ from centers.forms import CenterForm
 
 
 @require_http_methods(["GET"])
-def centers_list(request):
+def centers(request):
     centers = Center.objects.all()
-    return render(request, "centers/list.html", {
+    return render(request, "centers/centers.html", {
         'centers': centers
+    })
+
+
+@require_http_methods(["GET"])
+def center(request, pk):
+    center = get_object_or_404(Center, pk=pk)
+    return render(request, "centers/center.html", {
+        'center': center
     })
 
 
