@@ -29,7 +29,7 @@ def center_create(request):
     form = CenterForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect("centers_list")
+        return redirect("centers")
     return render(request, "centers/form.html", {
         'form': form
     })
@@ -42,7 +42,7 @@ def center_update(request, pk):
 
     if form.is_valid():
         form.save()
-        return redirect("centers_list")
+        return redirect("centers")
     return render(request, "centers/form.html", {
         'form': form
     })
@@ -53,5 +53,5 @@ def center_delete(request, pk):
     center = get_object_or_404(Center, pk=pk)
     if request.method == "POST":
         center.delete()
-        return redirect("centers_list")
-    return redirect("centers_list")
+        return redirect("centers")
+    return redirect("centers")
