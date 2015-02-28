@@ -56,3 +56,12 @@ target/
 
 # PyCharm Settings
 .idea/
+
+# Rope Project Trash
+.ropeproject/
+
+# Django Migrations
+migrations/
+
+# Sqlite
+db.sqlite3
