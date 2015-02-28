@@ -1,0 +1,8 @@
+<ul>
+    {% for center in centers %}
+    <li>
+        <a href="{% url "center" pk=center.pk %}">{{ center.name }}</a>
+        <a href="{% url "center_update" pk=center.pk %}">edit</a>
+    </li>
+    {% endfor %}
+</ul>
